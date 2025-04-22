@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ФизХим.LAB</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #101720, #2b3a42);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00e5ff;
+      text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+    }
+
+    p.description {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: #b2ebf2;
+      text-align: center;
+      max-width: 700px;
+      text-shadow: 0 0 4px rgba(0, 229, 255, 0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      backface-visibility: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-front {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00e5ff;
+      text-shadow: 0 0 5px rgba(0, 229, 255, 0.6);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background-color: #0f2027;
+    }
+
+    .card-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card:hover .card-face {
+      box-shadow: 0 0 20px #00e5ff80;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card-front {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ФизХим.LAB</h1>
+  <p class="description">Откройте карточки и назовите соответствующее физическое или химическое явление</p>
+
+  <div class="grid">
+    <!-- 12 карточек с номерами -->
+    <!-- Подставляем номера и изображения -->
+    <!-- Картинки от 1.PNG до 12.PNG -->
+
+    <!-- Цикл вручную, можно автоматизировать -->
+    <!-- Карточки 1–12 -->
+
+    <!-- JS можно потом добавить, если надо динамику -->
+    <!-- Здесь HTML вручную -->
+
+    <!-- Используем шаблон с подстановкой номера -->
+    <!-- Просто скопируй этот блок и замени номер/картинку -->
+
+    <!-- Карточка 1 -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">1</div>
+        <div class="card-face card-back">
+          <img src="images/1.PNG" alt="Картинка 1">
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточки 2–12 -->
+    <!-- Скопированы и отредактированы ниже -->
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">2</div>
+        <div class="card-face card-back">
+          <img src="images/2.PNG" alt="Картинка 2">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">3</div>
+        <div class="card-face card-back">
+          <img src="images/3.PNG" alt="Картинка 3">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">4</div>
+        <div class="card-face card-back">
+          <img src="images/4.PNG" alt="Картинка 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">5</div>
+        <div class="card-face card-back">
+          <img src="images/5.PNG" alt="Картинка 5">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">6</div>
+        <div class="card-face card-back">
+          <img src="images/6.PNG" alt="Картинка 6">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">7</div>
+        <div class="card-face card-back">
+          <img src="images/7.PNG" alt="Картинка 7">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">8</div>
+        <div class="card-face card-back">
+          <img src="images/8.PNG" alt="Картинка 8">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">9</div>
+        <div class="card-face card-back">
+          <img src="images/9.PNG" alt="Картинка 9">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">10</div>
+        <div class="card-face card-back">
+          <img src="images/10.PNG" alt="Картинка 10">
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">11</div>
+        <div class="card-face card-back">
+          <img src="images/11.PNG" alt="Картинка 11">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
